@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://bkm8bmm33lji7"]
+
+[ext_resource type="Script" uid="uid://d1qb3m0if4b8u" path="res://Scripts/level_base.gd" id="1_5bp0l"]
+[ext_resource type="Texture2D" uid="uid://7svxthovxis" path="res://Assets/LORONG(CROP).jpeg" id="2_y5sb5"]
+[ext_resource type="Script" uid="uid://daddx4trnjx5u" path="res://Scripts/hotspot.gd" id="3_tkr4y"]
+
+[node name="Corridor" type="Control" unique_id=1954237158]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5bp0l")
+
+[node name="Bg" type="TextureRect" parent="." unique_id=328140568]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_y5sb5")
+expand_mode = 1
+
+[node name="pintu201" type="Control" parent="." unique_id=1185591110]
+layout_mode = 1
+anchor_left = 0.386
+anchor_top = 0.24300002
+anchor_right = 0.545
+anchor_bottom = 0.882
+offset_left = -574.12
+offset_top = -72.44
+offset_right = -709.4
+offset_bottom = 103.43994
+offset_transform_enabled = true
+script = ExtResource("3_tkr4y")
+target_scene = "uid://1gg1773fcqqm"
+
+[node name="Highlight" type="ColorRect" parent="pintu201" unique_id=1957453657]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 1, 1, 0.57254905)
+
+[node name="pintu202" type="Control" parent="." unique_id=1475741492]
+layout_mode = 1
+anchor_left = 0.386
+anchor_top = 0.24300002
+anchor_right = 0.545
+anchor_bottom = 0.882
+offset_left = 690.88
+offset_top = 7.5599976
+offset_right = 473.59998
+offset_bottom = -264.56006
+offset_transform_enabled = true
+script = ExtResource("3_tkr4y")
+locked = true
+
+[node name="Highlight" type="ColorRect" parent="pintu202" unique_id=834228586]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 1, 1, 0.5686275)
+
+[node name="MessageLabel" type="Label" parent="." unique_id=1067542002]
+layout_mode = 0
+offset_left = 610.0
+offset_top = 75.0
+offset_right = 650.0
+offset_bottom = 240.0
