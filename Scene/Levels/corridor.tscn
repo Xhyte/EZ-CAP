@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://d1qb3m0if4b8u" path="res://Scripts/level_base.gd" id="1_5bp0l"]
 [ext_resource type="Texture2D" uid="uid://7svxthovxis" path="res://Assets/LORONG(CROP).jpeg" id="2_y5sb5"]
 [ext_resource type="Script" uid="uid://daddx4trnjx5u" path="res://Scripts/hotspot.gd" id="3_tkr4y"]
+[ext_resource type="PackedScene" uid="uid://l750swlnotms" path="res://Scene/Objects/camera_hp.tscn" id="4_iug7f"]
 
 [node name="Corridor" type="Control" unique_id=1954237158]
 layout_mode = 3
@@ -78,3 +79,5 @@ offset_left = 610.0
 offset_top = 75.0
 offset_right = 650.0
 offset_bottom = 240.0
+
+[node name="CameraHp" parent="." unique_id=373775551 instance=ExtResource("4_iug7f")]

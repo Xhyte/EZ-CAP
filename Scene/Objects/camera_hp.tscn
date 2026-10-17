@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://l750swlnotms"]
+
+[ext_resource type="Script" uid="uid://ur1hmcpaqmts" path="res://Scripts/camera_hp.gd" id="1_xq6ql"]
+
+[node name="CameraHp" type="CanvasLayer" unique_id=373775551]
+layer = 20
+script = ExtResource("1_xq6ql")
+
+[node name="Overlay" type="Control" parent="." unique_id=1070567594]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Frame" type="TextureRect" parent="Overlay" unique_id=510008134]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Tint" type="ColorRect" parent="Overlay" unique_id=242145168]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.40784314)
+
+[node name="Flash" type="ColorRect" parent="Overlay" unique_id=1384720479]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Warning" type="Label" parent="Overlay" unique_id=52160314]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="ShutterSound" type="AudioStreamPlayer" parent="." unique_id=628410956]
