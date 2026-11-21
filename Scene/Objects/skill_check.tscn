@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cdpji3n0g2s1"]
+
+[ext_resource type="Script" uid="uid://dc8c2h8ay3iq8" path="res://Scripts/skill_check.gd" id="1_mwpa1"]
+
+[node name="Skillcheck" type="Control" unique_id=1604804090]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -150.0
+offset_right = 150.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_mwpa1")

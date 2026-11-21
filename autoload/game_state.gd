@@ -11,6 +11,7 @@ var sanity := MAX_SANITY
 var memory := MAX_MEMORY
 var camera_mode := false
 var skillcheck_active := false
+var previous_scene := ""     # scene sebelumnya, dipakai untuk keluar dari loker
 
 func lose_sanity(amount: int) -> void:
 	sanity = max(0, sanity - amount)
