@@ -1,17 +1,29 @@
 extends "res://Scripts/level_base.gd"
-# Scene di dalam loker: pintu sedikit terbuka, pemain harus lolos skill check
-# saat ancaman hantu muncul.
+# Loker: langkah mendekat -> Mbah Yan mengintip + QTE -> langkah menjauh.
 
-@export var warning_time := 3.0      # jeda tanda bahaya sebelum skill check
-@export var checks_needed := 1       # jumlah skill check beruntun (belum final)
+@export var approach_time := 4.0     # lama suara langkah mendekat
+@export var leave_time := 3.0        # lama suara langkah menjauh
+@export var checks_needed := 1
+@export var eye_top := 150.0         # posisi y mata saat mulai mengintip
+@export var eye_bottom := 800.0      # posisi y mata saat selesai
 
-@onready var skill_check = $SkillCheck
+@onready var skill_check = $Skillcheck
 @onready var exit_slit = $ExitSlit
+@onready var eye: Control = $Eye
+@onready var footsteps: AudioStreamPlayer2D = $Footsteps
 
 var threat_running := false
 
-# PEMICU SEMENTARA UNTUK PENGUJIAN: tekan T.
-# Nanti diganti pemicu asli dari event hantu.
+func _ready() -> void:
+	super._ready()
+	eye.visible = false
+	if GameState.threat_active:
+		GameState.threat_active = false
+		start_threat()
+	else:
+		show_message("Tidak ada siapa-siapa. Aman.")
+
+# Jalan pintas untuk menguji: tekan T.
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventKey and event.pressed and not event.echo and event.keycode == KEY_T:
 		start_threat()
@@ -21,27 +33,48 @@ func start_threat() -> void:
 		return
 	threat_running = true
 	_lock_exit(true)
-	show_message("Ada sesuatu di luar... jangan bergerak.")
-	await get_tree().create_timer(warning_time).timeout
+	show_message("Langkah mendekat... jangan bergerak.")
 
+	# 1. Langkah makin dekat
+	if footsteps.stream:
+		footsteps.volume_db = -40.0
+		footsteps.play()
+		create_tween().tween_property(footsteps, "volume_db", 0.0, approach_time)
+	await get_tree().create_timer(approach_time).timeout
+
+	# 2. Mengintip + QTE
+	var survived := true
+	eye.position.y = eye_top
+	eye.visible = true
+	var scan := create_tween()
+	scan.tween_property(eye, "position:y", eye_bottom,
+			checks_needed * (skill_check.duration + 0.4))
 	for _i in checks_needed:
 		skill_check.start()
 		var ok: bool = await skill_check.finished
 		if not ok:
-			_on_failed()
+			survived = false
+			break
+		await get_tree().create_timer(0.4).timeout
+	scan.kill()
+
+	if survived:
+		eye.visible = false
+	else:
+		show_message("Ketahuan!")
+		GameState.lose_sanity(25)
+		await get_tree().create_timer(1.0).timeout
+		eye.visible = false
+		if GameState.sanity <= 0:
 			return
-		await get_tree().create_timer(0.6).timeout
-	_on_survived()
 
-func _on_survived() -> void:
-	show_message("Ancaman sudah lewat...")
-	_lock_exit(false)
-	threat_running = false
-
-func _on_failed() -> void:
-	# TODO: konsekuensi gagal BELUM diputuskan tim (sanity? game over? jumpscare?)
-	print("Skill check GAGAL")
-	show_message("Ketahuan!")
+	# 3. Langkah menjauh, baru boleh keluar
+	show_message("Langkah menjauh...")
+	if footsteps.stream:
+		create_tween().tween_property(footsteps, "volume_db", -40.0, leave_time)
+	await get_tree().create_timer(leave_time).timeout
+	footsteps.stop()
+	show_message("Sudah aman.")
 	_lock_exit(false)
 	threat_running = false
 

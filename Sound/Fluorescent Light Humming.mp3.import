@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://0htbwkl8c8ll"
+path="res://.godot/imported/Fluorescent Light Humming.mp3-32869af51c8e5e461cc20081543676a4.mp3str"
+
+[deps]
+
+source_file="res://Sound/Fluorescent Light Humming.mp3"
+dest_files=["res://.godot/imported/Fluorescent Light Humming.mp3-32869af51c8e5e461cc20081543676a4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

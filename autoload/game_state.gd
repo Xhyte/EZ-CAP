@@ -12,6 +12,11 @@ var memory := MAX_MEMORY
 var camera_mode := false
 var skillcheck_active := false
 var previous_scene := ""     # scene sebelumnya, dipakai untuk keluar dari loker
+var threat_active := false
+var stage_selesai := 0
+
+func selesaikan_stage(nomor: int) -> void:
+	stage_selesai = max(stage_selesai, nomor)
 
 func lose_sanity(amount: int) -> void:
 	sanity = max(0, sanity - amount)

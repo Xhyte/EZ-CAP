@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://b0u7tbleker3o"]
 
-[ext_resource type="Texture2D" uid="uid://do2yqaxcdod70" path="res://Assets/contoh kelas.jpeg" id="1_0rglj"]
 [ext_resource type="Script" uid="uid://bdke2itovklgh" path="res://Scripts/locker_inside.gd" id="1_u1j2d"]
 [ext_resource type="Script" uid="uid://daddx4trnjx5u" path="res://Scripts/hotspot.gd" id="2_c5qj3"]
+[ext_resource type="Texture2D" uid="uid://x850cgqgbbjv" path="res://Assets/Kelas (tekgame).webp" id="2_u1j2d"]
 [ext_resource type="PackedScene" uid="uid://cdpji3n0g2s1" path="res://Scene/Objects/skill_check.tscn" id="3_c1mcc"]
+[ext_resource type="AudioStream" uid="uid://dbvxtu1l2cst3" path="res://Sound/Monster Footsteps 3.mp3" id="5_pxyhb"]
 
 [node name="LockerInside" type="Control" unique_id=1616503513]
 layout_mode = 3
@@ -22,7 +23,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-texture = ExtResource("1_0rglj")
+texture = ExtResource("2_u1j2d")
 expand_mode = 1
 
 [node name="DoorLeft" type="ColorRect" parent="." unique_id=2031652407]
@@ -44,6 +45,15 @@ offset_left = 1018.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
+
+[node name="Eye" type="ColorRect" parent="." unique_id=829370667]
+layout_mode = 0
+offset_left = 923.0
+offset_top = 27.0
+offset_right = 983.0
+offset_bottom = 51.0
+mouse_filter = 2
+color = Color(0.54248, 1.347661e-06, 3.3691526e-07, 1)
 
 [node name="ExitSlit" type="Control" parent="." unique_id=626441903]
 layout_mode = 1
@@ -82,3 +92,6 @@ offset_top = -23.0
 offset_right = 20.0
 grow_horizontal = 2
 grow_vertical = 0
+
+[node name="Footsteps" type="AudioStreamPlayer2D" parent="." unique_id=1502593549]
+stream = ExtResource("5_pxyhb")

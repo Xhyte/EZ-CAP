@@ -7,7 +7,7 @@ signal message_requested(text: String)
 @export var locked := false                       # terkunci?
 @export var locked_text := "Pintu ini terkunci."
 @export var message := ""                         # teks jika objek biasa diklik
-
+@export var butuh_stage := 0
 @onready var highlight: ColorRect = $Highlight
 
 func _ready() -> void:
@@ -26,7 +26,7 @@ func _gui_input(event: InputEvent) -> void:
 			and event.pressed \
 			and event.button_index == MOUSE_BUTTON_LEFT:
 		accept_event()
-		if locked:
+		if locked or GameState.stage_selesai < butuh_stage:
 			message_requested.emit(locked_text)
 		elif go_back:
 			_go(GameState.previous_scene)

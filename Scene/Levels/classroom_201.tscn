@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://d1qb3m0if4b8u" path="res://Scripts/level_base.gd" id="1_5s04h"]
 [ext_resource type="Texture2D" uid="uid://x850cgqgbbjv" path="res://Assets/Kelas (tekgame).webp" id="3_nv6cs"]
 [ext_resource type="Script" uid="uid://daddx4trnjx5u" path="res://Scripts/hotspot.gd" id="3_t4iru"]
+[ext_resource type="Script" uid="uid://cje2s1kp28ith" path="res://Scene/Levels/tes_selesai.gd" id="4_nv6cs"]
+[ext_resource type="Script" uid="uid://bee8gvrw304cp" path="res://Scripts/threat_director.gd" id="5_t4iru"]
 
 [node name="classroom201" type="Control" unique_id=1954237158]
 layout_mode = 3
@@ -82,3 +84,17 @@ offset_left = 610.0
 offset_top = 75.0
 offset_right = 650.0
 offset_bottom = 240.0
+
+[node name="TesSelesai" type="Button" parent="." unique_id=866736606]
+layout_mode = 0
+offset_left = 718.0
+offset_top = 196.0
+offset_right = 1202.0
+offset_bottom = 448.0
+text = "Selesai tes"
+script = ExtResource("4_nv6cs")
+
+[node name="ThreatDirector" type="Node" parent="." unique_id=243618842]
+script = ExtResource("5_t4iru")
+min_wait = 5.0
+max_wait = 10.0
