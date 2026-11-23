@@ -23,17 +23,26 @@ func _ready() -> void:
 	react_timer.timeout.connect(_caught)
 	_schedule()
 
+func _light():
+	return get_tree().get_first_node_in_group("flicker_light")
+
 func _schedule() -> void:
 	wait_timer.start(randf_range(min_wait, max_wait))
 
 func _approach() -> void:
-	GameState.threat_active = true      # sudah boleh sembunyi sejak langkah terdengar
+	GameState.threat_active = true
+	var l = _light()
+	if l:
+		l.flicker_now()          # <- baru
 	if steps and steps.stream:
 		steps.play()
 	get_parent().show_message("Ada langkah kaki mendekat...")
 	knock_timer.start(steps_time)
 
 func _knock() -> void:
+	var l = _light()
+	if l:
+		l.blackout()             # <- baru
 	if steps:
 		steps.stop()
 	if knock and knock.stream:
@@ -44,5 +53,8 @@ func _knock() -> void:
 func _caught() -> void:
 	GameState.threat_active = false
 	await Jumpscare.play()
+	var l = _light()
+	if l:
+		l.restore()              # <- baru
 	GameState.lose_sanity(25)
 	_schedule()

@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://daddx4trnjx5u" path="res://Scripts/hotspot.gd" id="3_t4iru"]
 [ext_resource type="Script" uid="uid://cje2s1kp28ith" path="res://Scene/Levels/tes_selesai.gd" id="4_nv6cs"]
 [ext_resource type="Script" uid="uid://bee8gvrw304cp" path="res://Scripts/threat_director.gd" id="5_t4iru"]
+[ext_resource type="Script" uid="uid://clqudkoak0ai5" path="res://Scripts/flicekr_light.gd" id="6_l8by3"]
 
 [node name="classroom201" type="Control" unique_id=1954237158]
 layout_mode = 3
@@ -98,3 +99,18 @@ script = ExtResource("4_nv6cs")
 script = ExtResource("5_t4iru")
 min_wait = 5.0
 max_wait = 10.0
+
+[node name="FlickerLight" type="CanvasLayer" parent="." unique_id=482217352]
+layer = 5
+script = ExtResource("6_l8by3")
+min_wait = 3.0
+max_wait = 2.0
+
+[node name="Dark" type="ColorRect" parent="FlickerLight" unique_id=1001111529]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
