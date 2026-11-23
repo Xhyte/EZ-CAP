@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 SceneManager="*uid://coo6jf8tolq8r"
 GameState="*uid://decvnn23fc23s"
+Jumpscare="*uid://bkfl273dtt67"
 
 [display]
 

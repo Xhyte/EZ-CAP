@@ -10,7 +10,7 @@ extends "res://Scripts/level_base.gd"
 @onready var skill_check = $Skillcheck
 @onready var exit_slit = $ExitSlit
 @onready var eye: Control = $Eye
-@onready var footsteps: AudioStreamPlayer2D = $Footsteps
+@onready var footsteps = $Footsteps
 
 var threat_running := false
 
@@ -58,13 +58,10 @@ func start_threat() -> void:
 		await get_tree().create_timer(0.4).timeout
 	scan.kill()
 
-	if survived:
-		eye.visible = false
-	else:
-		show_message("Ketahuan!")
+	eye.visible = false
+	if not survived:
+		await Jumpscare.play()
 		GameState.lose_sanity(25)
-		await get_tree().create_timer(1.0).timeout
-		eye.visible = false
 		if GameState.sanity <= 0:
 			return
 
