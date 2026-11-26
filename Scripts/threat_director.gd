@@ -52,9 +52,12 @@ func _knock() -> void:
 
 func _caught() -> void:
 	GameState.threat_active = false
-	await Jumpscare.play()
 	var l = _light()
 	if l:
-		l.restore()              # <- baru
+		l.hide_dark()
+	await Jumpscare.play()
+	if l:
+		l.dark.visible = true
+		l.restore()
 	GameState.lose_sanity(25)
 	_schedule()

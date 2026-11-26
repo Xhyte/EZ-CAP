@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://daddx4trnjx5u" path="res://Scripts/hotspot.gd" id="3_ae1xd"]
 [ext_resource type="Script" uid="uid://bee8gvrw304cp" path="res://Scripts/threat_director.gd" id="4_5vwhi"]
 [ext_resource type="Script" uid="uid://clqudkoak0ai5" path="res://Scripts/flicekr_light.gd" id="5_ae1xd"]
+[ext_resource type="Script" uid="uid://cje2s1kp28ith" path="res://Scene/Levels/tes_selesai.gd" id="6_v4k12"]
 
 [node name="classroom202" type="Control" unique_id=1954237158]
 layout_mode = 3
@@ -101,7 +102,6 @@ min_wait = 3.0
 max_wait = 2.0
 
 [node name="Dark" type="ColorRect" parent="FlickerLight" unique_id=252093931]
-visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -109,3 +109,12 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
+
+[node name="TesSelesai" type="Button" parent="." unique_id=2093061781]
+layout_mode = 0
+offset_left = 718.0
+offset_top = 196.0
+offset_right = 1202.0
+offset_bottom = 448.0
+text = "Selesai tes"
+script = ExtResource("6_v4k12")

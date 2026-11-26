@@ -111,7 +111,6 @@ min_wait = 3.0
 max_wait = 2.0
 
 [node name="Dark" type="ColorRect" parent="FlickerLight" unique_id=1001111529]
-visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

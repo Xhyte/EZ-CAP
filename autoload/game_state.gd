@@ -2,7 +2,6 @@ extends Node
 
 signal sanity_changed(value: int)
 signal memory_changed(value: int)
-signal camera_toggled(active: bool)
 
 const MAX_SANITY := 100
 const MAX_MEMORY := 10

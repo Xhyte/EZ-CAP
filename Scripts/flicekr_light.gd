@@ -55,3 +55,7 @@ func blackout(level := 0.92) -> void:
 func restore() -> void:
 	override = false
 	create_tween().tween_property(dark, "modulate:a", base_darkness, 0.4)
+
+func hide_dark() -> void:
+	override = true
+	dark.visible = false
