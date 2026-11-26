@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bdke2itovklgh" path="res://Scripts/locker_inside.gd" id="1_u1j2d"]
 [ext_resource type="Script" uid="uid://daddx4trnjx5u" path="res://Scripts/hotspot.gd" id="2_c5qj3"]
 [ext_resource type="Texture2D" uid="uid://bm3smbpt1pgl" path="res://Assets/kelas pintu kanan.png" id="2_pxyhb"]
+[ext_resource type="Texture2D" uid="uid://0j0e2ktd6wwq" path="res://Assets/jumpscare mata2.png" id="3_8uj2f"]
 [ext_resource type="PackedScene" uid="uid://cdpji3n0g2s1" path="res://Scene/Objects/skill_check.tscn" id="3_c1mcc"]
 [ext_resource type="AudioStream" uid="uid://dbvxtu1l2cst3" path="res://Sound/Monster Footsteps 3.mp3" id="5_pxyhb"]
 
@@ -26,35 +27,6 @@ mouse_filter = 2
 texture = ExtResource("2_pxyhb")
 expand_mode = 1
 
-[node name="DoorLeft" type="ColorRect" parent="." unique_id=2031652407]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = -1018.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 1)
-
-[node name="DoorRight" type="ColorRect" parent="." unique_id=2092774019]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 1018.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 1)
-
-[node name="Eye" type="ColorRect" parent="." unique_id=829370667]
-layout_mode = 0
-offset_left = 923.0
-offset_top = 27.0
-offset_right = 983.0
-offset_bottom = 51.0
-mouse_filter = 2
-color = Color(0.54248, 1.347661e-06, 3.3691526e-07, 1)
-
 [node name="ExitSlit" type="Control" parent="." unique_id=626441903]
 layout_mode = 1
 anchors_preset = 15
@@ -76,6 +48,38 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 color = Color(1, 1, 1, 0.33333334)
+
+[node name="Eye" type="TextureRect" parent="." unique_id=1246143704]
+layout_mode = 0
+offset_left = 1230.0
+offset_top = -6.0
+offset_right = 1950.0796
+offset_bottom = 476.74768
+rotation = 1.579523
+mouse_filter = 2
+texture = ExtResource("3_8uj2f")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="DoorLeft" type="ColorRect" parent="." unique_id=2031652407]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1018.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="DoorRight" type="ColorRect" parent="." unique_id=2092774019]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1018.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
 
 [node name="Skillcheck" parent="." unique_id=1604804090 instance=ExtResource("3_c1mcc")]
 layout_mode = 1

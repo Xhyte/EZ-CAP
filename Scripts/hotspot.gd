@@ -8,6 +8,8 @@ signal message_requested(text: String)
 @export var locked_text := "Pintu ini terkunci."
 @export var message := ""                         # teks jika objek biasa diklik
 @export var butuh_stage := 0
+@export var door_sound: AudioStream               # suara saat dibuka (kosong = tanpa suara & tanpa jeda)
+@export var hold_time := 8.0                      # lama layar hitam, hanya jika door_sound diisi
 @onready var highlight: CanvasItem = $Highlight
 
 func _ready() -> void:
@@ -41,7 +43,8 @@ func _go(dest: String) -> void:
 		return
 	# catat scene saat ini agar bisa kembali (mis. keluar dari loker)
 	GameState.previous_scene = get_tree().current_scene.scene_file_path
-	SceneManager.go_to(dest)
+	var hold := hold_time if door_sound else 0.0
+	SceneManager.go_to(dest, 0.4, hold, door_sound)
 
 func _has_point(point: Vector2) -> bool:
 	var poly := get_node_or_null("Highlight") as Polygon2D

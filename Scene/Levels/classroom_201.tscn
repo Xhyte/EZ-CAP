@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bm3smbpt1pgl" path="res://Assets/kelas pintu kanan.png" id="2_l8by3"]
 [ext_resource type="Script" uid="uid://daddx4trnjx5u" path="res://Scripts/hotspot.gd" id="3_t4iru"]
 [ext_resource type="Script" uid="uid://cje2s1kp28ith" path="res://Scene/Levels/tes_selesai.gd" id="4_nv6cs"]
+[ext_resource type="AudioStream" uid="uid://by041uuirdl2y" path="res://Sound/Door opening.mp3" id="4_s62y4"]
 [ext_resource type="Script" uid="uid://bee8gvrw304cp" path="res://Scripts/threat_director.gd" id="5_t4iru"]
 [ext_resource type="Script" uid="uid://clqudkoak0ai5" path="res://Scripts/flicekr_light.gd" id="6_l8by3"]
 
@@ -40,6 +41,7 @@ offset_bottom = -203.56006
 offset_transform_enabled = true
 script = ExtResource("3_t4iru")
 target_scene = "uid://bkm8bmm33lji7"
+door_sound = ExtResource("4_s62y4")
 
 [node name="Highlight" type="Polygon2D" parent="exitdoor" unique_id=2083641454]
 color = Color(1, 1, 1, 0.18431373)

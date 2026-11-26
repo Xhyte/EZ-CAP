@@ -22,7 +22,7 @@ func _loop() -> void:
 		await get_tree().create_timer(randf_range(min_wait, max_wait)).timeout
 		if not is_inside_tree():
 			return
-		if not override:
+		if not override and not GameState.is_calm():
 			await _flicker()
 
 func _flicker(n := -1) -> void:
@@ -59,3 +59,23 @@ func restore() -> void:
 func hide_dark() -> void:
 	override = true
 	dark.visible = false
+	
+	# Berkedip selama `seconds` detik, lalu berhenti sendiri.
+func flicker_for(seconds: float) -> void:
+	if override:
+		return
+	if buzz and buzz.stream:
+		buzz.play()
+	var elapsed := 0.0
+	while elapsed < seconds and not override and not GameState.is_calm():
+		dark.modulate.a = randf_range(flicker_darkness - 0.2, flicker_darkness)
+		var d1 := randf_range(0.03, 0.12)
+		await get_tree().create_timer(d1).timeout
+		if override:
+			return
+		dark.modulate.a = randf_range(base_darkness - 0.1, base_darkness + 0.1)
+		var d2 := randf_range(0.03, 0.15)
+		await get_tree().create_timer(d2).timeout
+		elapsed += d1 + d2
+	if not override:
+		dark.modulate.a = base_darkness

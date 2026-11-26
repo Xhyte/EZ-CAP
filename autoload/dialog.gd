@@ -65,6 +65,7 @@ func say(lines: Array) -> void:
 	if _active:
 		return
 	_active = true
+	GameState.calm_begin()
 	root.visible = true
 	for line in lines:
 		var who: String = line[0]
@@ -81,4 +82,5 @@ func say(lines: Array) -> void:
 			await get_tree().process_frame
 	root.visible = false
 	_active = false
+	GameState.calm_end()
 	finished.emit()

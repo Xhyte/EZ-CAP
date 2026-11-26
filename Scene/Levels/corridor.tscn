@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://d1qb3m0if4b8u" path="res://Scripts/level_base.gd" id="1_5bp0l"]
 [ext_resource type="Texture2D" uid="uid://bokb4kvivet60" path="res://Assets/Coridor.png" id="2_krmui"]
 [ext_resource type="Script" uid="uid://daddx4trnjx5u" path="res://Scripts/hotspot.gd" id="3_tkr4y"]
+[ext_resource type="AudioStream" uid="uid://by041uuirdl2y" path="res://Sound/Door opening.mp3" id="4_iug7f"]
 
 [node name="Corridor" type="Control" unique_id=1954237158]
 layout_mode = 3
@@ -37,6 +38,7 @@ offset_bottom = -20.560059
 offset_transform_enabled = true
 script = ExtResource("3_tkr4y")
 target_scene = "uid://1gg1773fcqqm"
+door_sound = ExtResource("4_iug7f")
 
 [node name="Highlight" type="Polygon2D" parent="pintu201" unique_id=955398035]
 color = Color(1, 1, 1, 0.18431373)
@@ -56,6 +58,7 @@ offset_transform_enabled = true
 script = ExtResource("3_tkr4y")
 target_scene = "uid://du0l8fea827o4"
 butuh_stage = 1
+door_sound = ExtResource("4_iug7f")
 
 [node name="Highlight" type="Polygon2D" parent="pintu202" unique_id=118892375]
 color = Color(1, 1, 1, 0.18431373)
@@ -75,6 +78,7 @@ offset_transform_enabled = true
 script = ExtResource("3_tkr4y")
 target_scene = "uid://de4nyfwkch4gw"
 butuh_stage = 2
+door_sound = ExtResource("4_iug7f")
 
 [node name="Highlight" type="Polygon2D" parent="pintu203" unique_id=26874634]
 color = Color(1, 1, 1, 0.18431373)
@@ -94,6 +98,7 @@ offset_transform_enabled = true
 script = ExtResource("3_tkr4y")
 target_scene = "uid://detu6uhs602lp"
 butuh_stage = 3
+door_sound = ExtResource("4_iug7f")
 
 [node name="Highlight" type="Polygon2D" parent="pintu204" unique_id=1546046967]
 color = Color(1, 1, 1, 0.18431373)
@@ -111,8 +116,9 @@ offset_right = 87.599976
 offset_bottom = -325.56006
 offset_transform_enabled = true
 script = ExtResource("3_tkr4y")
-target_scene = "uid://detu6uhs602lp"
+target_scene = "uid://m33hfci23abv"
 butuh_stage = 3
+door_sound = ExtResource("4_iug7f")
 
 [node name="Highlight" type="Polygon2D" parent="pintu205" unique_id=309535181]
 color = Color(1, 1, 1, 0.18431373)
