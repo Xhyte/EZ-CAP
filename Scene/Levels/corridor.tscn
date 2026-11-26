@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bkm8bmm33lji7"]
 
 [ext_resource type="Script" uid="uid://d1qb3m0if4b8u" path="res://Scripts/level_base.gd" id="1_5bp0l"]
-[ext_resource type="Texture2D" uid="uid://7svxthovxis" path="res://Assets/LORONG(CROP).jpeg" id="2_y5sb5"]
+[ext_resource type="Texture2D" uid="uid://bokb4kvivet60" path="res://Assets/Coridor.png" id="2_krmui"]
 [ext_resource type="Script" uid="uid://daddx4trnjx5u" path="res://Scripts/hotspot.gd" id="3_tkr4y"]
 
 [node name="Corridor" type="Control" unique_id=1954237158]
@@ -21,7 +21,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-texture = ExtResource("2_y5sb5")
+texture = ExtResource("2_krmui")
 expand_mode = 1
 
 [node name="pintu201" type="Control" parent="." unique_id=1185591110]
@@ -30,10 +30,10 @@ anchor_left = 0.386
 anchor_top = 0.24300002
 anchor_right = 0.545
 anchor_bottom = 0.882
-offset_left = -574.12
-offset_top = -72.44
-offset_right = -709.4
-offset_bottom = 103.43994
+offset_left = -594.12
+offset_top = -107.44
+offset_right = -793.4
+offset_bottom = -20.560059
 offset_transform_enabled = true
 script = ExtResource("3_tkr4y")
 target_scene = "uid://1gg1773fcqqm"
@@ -43,6 +43,9 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 1.0
+offset_right = -3.0
+offset_bottom = 22.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
@@ -54,10 +57,10 @@ anchor_left = 0.386
 anchor_top = 0.24300002
 anchor_right = 0.545
 anchor_bottom = 0.882
-offset_left = 690.88
-offset_top = 7.5599976
-offset_right = 473.59998
-offset_bottom = -264.56006
+offset_left = 922.88
+offset_top = -103.44
+offset_right = 720.6
+offset_bottom = -23.560059
 offset_transform_enabled = true
 script = ExtResource("3_tkr4y")
 target_scene = "uid://du0l8fea827o4"
@@ -68,6 +71,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 4.0
+offset_bottom = -7.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
@@ -79,10 +86,10 @@ anchor_left = 0.386
 anchor_top = 0.24300002
 anchor_right = 0.545
 anchor_bottom = 0.882
-offset_left = 39.880005
-offset_top = 38.559998
-offset_right = -217.40002
-offset_bottom = -406.56006
+offset_left = -69.119995
+offset_top = 137.56
+offset_right = -332.40002
+offset_bottom = -269.56006
 offset_transform_enabled = true
 script = ExtResource("3_tkr4y")
 target_scene = "uid://de4nyfwkch4gw"
@@ -93,10 +100,9 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 3.0
-offset_top = 1.0
-offset_right = 3.0
-offset_bottom = 1.0
+offset_top = 10.0
+offset_right = -5.0
+offset_bottom = -13.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
@@ -108,10 +114,10 @@ anchor_left = 0.386
 anchor_top = 0.24300002
 anchor_right = 0.545
 anchor_bottom = 0.882
-offset_left = 541.88
-offset_top = 28.559998
-offset_right = 298.59998
-offset_bottom = -413.56006
+offset_left = 465.88
+offset_top = 145.56
+offset_right = 198.59998
+offset_bottom = -276.56006
 offset_transform_enabled = true
 script = ExtResource("3_tkr4y")
 target_scene = "uid://detu6uhs602lp"
@@ -122,10 +128,38 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 13.0
-offset_top = 15.0
+offset_top = -2.0
 offset_right = 1.0
-offset_bottom = 4.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 1, 1, 0.5686275)
+
+[node name="pintu205" type="Control" parent="." unique_id=952112649]
+layout_mode = 1
+anchor_left = 0.386
+anchor_top = 0.24300002
+anchor_right = 0.545
+anchor_bottom = 0.882
+offset_left = 377.88
+offset_top = 192.56
+offset_right = 87.599976
+offset_bottom = -325.56006
+offset_transform_enabled = true
+script = ExtResource("3_tkr4y")
+target_scene = "uid://detu6uhs602lp"
+butuh_stage = 3
+
+[node name="Highlight" type="ColorRect" parent="pintu205" unique_id=251129484]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 1.0
+offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2

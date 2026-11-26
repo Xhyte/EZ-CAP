@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://1gg1773fcqqm"]
 
 [ext_resource type="Script" uid="uid://d1qb3m0if4b8u" path="res://Scripts/level_base.gd" id="1_5s04h"]
-[ext_resource type="Texture2D" uid="uid://x850cgqgbbjv" path="res://Assets/Kelas (tekgame).webp" id="3_nv6cs"]
+[ext_resource type="Texture2D" uid="uid://bm3smbpt1pgl" path="res://Assets/kelas pintu kanan.png" id="2_l8by3"]
 [ext_resource type="Script" uid="uid://daddx4trnjx5u" path="res://Scripts/hotspot.gd" id="3_t4iru"]
 [ext_resource type="Script" uid="uid://cje2s1kp28ith" path="res://Scene/Levels/tes_selesai.gd" id="4_nv6cs"]
 [ext_resource type="Script" uid="uid://bee8gvrw304cp" path="res://Scripts/threat_director.gd" id="5_t4iru"]
@@ -24,7 +24,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-texture = ExtResource("3_nv6cs")
+texture = ExtResource("2_l8by3")
 expand_mode = 1
 
 [node name="exitdoor" type="Control" parent="." unique_id=1475741492]
@@ -33,10 +33,10 @@ anchor_left = 0.386
 anchor_top = 0.24300002
 anchor_right = 0.545
 anchor_bottom = 0.882
-offset_left = 911.88
-offset_top = -6.4400024
-offset_right = 790.6
-offset_bottom = -264.56006
+offset_left = 920.88
+offset_top = 17.559998
+offset_right = 800.6
+offset_bottom = -203.56006
 offset_transform_enabled = true
 script = ExtResource("3_t4iru")
 target_scene = "uid://bkm8bmm33lji7"
@@ -46,6 +46,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 1.0
+offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
@@ -57,10 +61,10 @@ anchor_left = 0.386
 anchor_top = 0.24300002
 anchor_right = 0.545
 anchor_bottom = 0.882
-offset_left = -682.12
-offset_top = 57.559998
-offset_right = -763.4
-offset_bottom = -193.56006
+offset_left = -671.12
+offset_top = 50.559998
+offset_right = -765.4
+offset_bottom = -179.56006
 offset_transform_enabled = true
 script = ExtResource("3_t4iru")
 target_scene = "uid://b0u7tbleker3o"
@@ -70,10 +74,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -17.0
-offset_top = -10.0
-offset_right = -17.0
-offset_bottom = -10.0
+offset_left = -11.0
+offset_top = -13.0
+offset_right = -8.0
+offset_bottom = -13.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
@@ -107,6 +111,7 @@ min_wait = 3.0
 max_wait = 2.0
 
 [node name="Dark" type="ColorRect" parent="FlickerLight" unique_id=1001111529]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

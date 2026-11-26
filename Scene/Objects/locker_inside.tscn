@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bdke2itovklgh" path="res://Scripts/locker_inside.gd" id="1_u1j2d"]
 [ext_resource type="Script" uid="uid://daddx4trnjx5u" path="res://Scripts/hotspot.gd" id="2_c5qj3"]
-[ext_resource type="Texture2D" uid="uid://x850cgqgbbjv" path="res://Assets/Kelas (tekgame).webp" id="2_u1j2d"]
+[ext_resource type="Texture2D" uid="uid://bm3smbpt1pgl" path="res://Assets/kelas pintu kanan.png" id="2_pxyhb"]
 [ext_resource type="PackedScene" uid="uid://cdpji3n0g2s1" path="res://Scene/Objects/skill_check.tscn" id="3_c1mcc"]
 [ext_resource type="AudioStream" uid="uid://dbvxtu1l2cst3" path="res://Sound/Monster Footsteps 3.mp3" id="5_pxyhb"]
 
@@ -23,7 +23,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-texture = ExtResource("2_u1j2d")
+texture = ExtResource("2_pxyhb")
 expand_mode = 1
 
 [node name="DoorLeft" type="ColorRect" parent="." unique_id=2031652407]

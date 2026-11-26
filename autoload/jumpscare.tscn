@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bkfl273dtt67"]
 
 [ext_resource type="Script" uid="uid://s3owilb43r4c" path="res://autoload/jumpscare.gd" id="1_eoie0"]
-[ext_resource type="Texture2D" uid="uid://cr1cvpec24pu8" path="res://Assets/Screenshot 2026-11-23 214647.png" id="1_mmdfl"]
+[ext_resource type="Texture2D" uid="uid://4w7yuteylxd2" path="res://Assets/jumpscare.png" id="2_tm0gx"]
 [ext_resource type="AudioStream" uid="uid://dt8gjxqrbxks4" path="res://Sound/jumpscare-sound-effects.mp3" id="3_tm0gx"]
 
 [node name="Jumpscare" type="CanvasLayer" unique_id=2110650453]
@@ -12,11 +12,15 @@ script = ExtResource("1_eoie0")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -465.0
+offset_top = -92.0
+offset_right = 599.0
+offset_bottom = 1880.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 0
-texture = ExtResource("1_mmdfl")
-expand_mode = 1
+texture = ExtResource("2_tm0gx")
+expand_mode = 4
 stretch_mode = 6
 
 [node name="Scream" type="AudioStreamPlayer" parent="." unique_id=1053541249]
