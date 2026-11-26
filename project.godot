@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="EZCAP"
-run/main_scene="uid://bkm8bmm33lji7"
+run/main_scene="uid://bvmwi1j6xqbwd"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -20,6 +20,8 @@ config/icon="res://icon.svg"
 SceneManager="*uid://coo6jf8tolq8r"
 GameState="*uid://decvnn23fc23s"
 Jumpscare="*uid://bkfl273dtt67"
+PauseMenu="*uid://bxw2h14tkn1hd"
+Dialog="*uid://bjg71cv2doiow"
 
 [display]
 

@@ -34,3 +34,10 @@ func use_memory() -> bool:
 
 func game_over() -> void:
 	print("GAME OVER")   # nanti diganti pindah ke scene game over
+
+func reset() -> void:
+	sanity = 100
+	stage_selesai = 0
+	threat_active = false
+	skillcheck_active = false
+	previous_scene = ""
