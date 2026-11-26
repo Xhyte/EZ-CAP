@@ -8,7 +8,7 @@ signal message_requested(text: String)
 @export var locked_text := "Pintu ini terkunci."
 @export var message := ""                         # teks jika objek biasa diklik
 @export var butuh_stage := 0
-@onready var highlight: ColorRect = $Highlight
+@onready var highlight: CanvasItem = $Highlight
 
 func _ready() -> void:
 	add_to_group("hotspots")
@@ -42,3 +42,9 @@ func _go(dest: String) -> void:
 	# catat scene saat ini agar bisa kembali (mis. keluar dari loker)
 	GameState.previous_scene = get_tree().current_scene.scene_file_path
 	SceneManager.go_to(dest)
+
+func _has_point(point: Vector2) -> bool:
+	var poly := get_node_or_null("Highlight") as Polygon2D
+	if poly:
+		return Geometry2D.is_point_in_polygon(point - poly.position, poly.polygon)
+	return Rect2(Vector2.ZERO, size).has_point(point)

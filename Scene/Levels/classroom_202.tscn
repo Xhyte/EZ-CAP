@@ -41,19 +41,9 @@ offset_transform_enabled = true
 script = ExtResource("3_ae1xd")
 target_scene = "uid://bkm8bmm33lji7"
 
-[node name="Highlight" type="ColorRect" parent="exitdoor" unique_id=834228586]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -8.0
-offset_top = 26.0
-offset_right = -8.0
-offset_bottom = 4.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-color = Color(1, 1, 1, 0.5686275)
+[node name="Highlight" type="Polygon2D" parent="exitdoor" unique_id=1682487923]
+color = Color(1, 1, 1, 0.18431373)
+polygon = PackedVector2Array(-7, -29, 182, 43, 178, 502, 128, 519, 4, 518, -12, 528)
 
 [node name="locker" type="Control" parent="." unique_id=1191137696]
 layout_mode = 1
@@ -69,19 +59,9 @@ offset_transform_enabled = true
 script = ExtResource("3_ae1xd")
 target_scene = "uid://b0u7tbleker3o"
 
-[node name="Highlight" type="ColorRect" parent="locker" unique_id=1890009398]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -1.0
-offset_top = 4.0
-offset_right = -1.0
-offset_bottom = -10.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-color = Color(1, 1, 1, 0.5686275)
+[node name="Highlight" type="Polygon2D" parent="locker" unique_id=106487329]
+color = Color(1, 1, 1, 0.18431373)
+polygon = PackedVector2Array(-6, 2, 226, -25, 218, 490, 149, 490, -1, 429)
 
 [node name="MessageLabel" type="Label" parent="." unique_id=1067542002]
 layout_mode = 0

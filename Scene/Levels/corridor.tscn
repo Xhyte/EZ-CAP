@@ -38,18 +38,9 @@ offset_transform_enabled = true
 script = ExtResource("3_tkr4y")
 target_scene = "uid://1gg1773fcqqm"
 
-[node name="Highlight" type="ColorRect" parent="pintu201" unique_id=1957453657]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 1.0
-offset_right = -3.0
-offset_bottom = 22.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-color = Color(1, 1, 1, 0.57254905)
+[node name="Highlight" type="Polygon2D" parent="pintu201" unique_id=955398035]
+color = Color(1, 1, 1, 0.18431373)
+polygon = PackedVector2Array(-1, -30, 105, 19, 107, 768, 0, 828)
 
 [node name="pintu202" type="Control" parent="." unique_id=1475741492]
 layout_mode = 1
@@ -66,19 +57,9 @@ script = ExtResource("3_tkr4y")
 target_scene = "uid://du0l8fea827o4"
 butuh_stage = 1
 
-[node name="Highlight" type="ColorRect" parent="pintu202" unique_id=834228586]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -2.0
-offset_top = -2.0
-offset_right = 4.0
-offset_bottom = -7.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-color = Color(1, 1, 1, 0.5686275)
+[node name="Highlight" type="Polygon2D" parent="pintu202" unique_id=118892375]
+color = Color(1, 1, 1, 0.18431373)
+polygon = PackedVector2Array(-2, -2, 105, -59, 114, 827, 3, 766)
 
 [node name="pintu203" type="Control" parent="." unique_id=434565178]
 layout_mode = 1
@@ -95,18 +76,9 @@ script = ExtResource("3_tkr4y")
 target_scene = "uid://de4nyfwkch4gw"
 butuh_stage = 2
 
-[node name="Highlight" type="ColorRect" parent="pintu203" unique_id=1130068712]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = 10.0
-offset_right = -5.0
-offset_bottom = -13.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-color = Color(1, 1, 1, 0.5686275)
+[node name="Highlight" type="Polygon2D" parent="pintu203" unique_id=26874634]
+color = Color(1, 1, 1, 0.18431373)
+polygon = PackedVector2Array(-3, -20, 38, -2, 40, 267, -2, 289)
 
 [node name="pintu204" type="Control" parent="." unique_id=1440862072]
 layout_mode = 1
@@ -123,18 +95,9 @@ script = ExtResource("3_tkr4y")
 target_scene = "uid://detu6uhs602lp"
 butuh_stage = 3
 
-[node name="Highlight" type="ColorRect" parent="pintu204" unique_id=2002793169]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -2.0
-offset_right = 1.0
-offset_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-color = Color(1, 1, 1, 0.5686275)
+[node name="Highlight" type="Polygon2D" parent="pintu204" unique_id=1546046967]
+color = Color(1, 1, 1, 0.18431373)
+polygon = PackedVector2Array(-2, -1, 38, -23, 38, 286, -1, 266)
 
 [node name="pintu205" type="Control" parent="." unique_id=952112649]
 layout_mode = 1
@@ -151,19 +114,9 @@ script = ExtResource("3_tkr4y")
 target_scene = "uid://detu6uhs602lp"
 butuh_stage = 3
 
-[node name="Highlight" type="ColorRect" parent="pintu205" unique_id=251129484]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -1.0
-offset_top = -1.0
-offset_right = 1.0
-offset_bottom = 2.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-color = Color(1, 1, 1, 0.5686275)
+[node name="Highlight" type="Polygon2D" parent="pintu205" unique_id=309535181]
+color = Color(1, 1, 1, 0.18431373)
+polygon = PackedVector2Array(-6, 1, 16, -10, 15, 178, -9, 165)
 
 [node name="MessageLabel" type="Label" parent="." unique_id=1067542002]
 layout_mode = 0
