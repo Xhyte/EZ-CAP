@@ -56,6 +56,8 @@ func _button(text: String, parent: Control, callback: Callable) -> void:
 func _input(event: InputEvent) -> void:
 	if not event.is_action_pressed("pause"):
 		return
+	if GameState.is_dead:                    # saat game over, pause tidak boleh muncul
+		return
 	var scene := get_tree().current_scene
 	if scene == null or scene.scene_file_path == MAIN_MENU:
 		return

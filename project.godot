@@ -22,6 +22,8 @@ GameState="*uid://decvnn23fc23s"
 Jumpscare="*uid://bkfl273dtt67"
 PauseMenu="*uid://bxw2h14tkn1hd"
 Dialog="*uid://bjg71cv2doiow"
+Hud="*uid://7f7fv7rjbv75"
+GameOver="*uid://bievteit1qdq5"
 
 [display]
 
