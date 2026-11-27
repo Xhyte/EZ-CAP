@@ -17,4 +17,4 @@ func _stage() -> int:
 func _pressed() -> void:
 	GameState.selesaikan_stage(_stage())
 	get_parent().show_message("Stage %d selesai (tes)." % _stage())
-	await Dialog.say([["Ez", "Akhirnya kamu bangun."], ["Karani", "Siapa kamu?"]])
+	await Dialog.say([["Ez", "Sepertinya itu kunci untuk membuka ruangan lain!"], ["Karani", "Mang eak kids?"]])

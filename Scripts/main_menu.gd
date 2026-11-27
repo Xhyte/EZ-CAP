@@ -1,6 +1,6 @@
 extends Control
 
-@export_file("*.tscn") var start_scene := "res://Scene/Levels/corridor.tscn"
+@export_file("*.tscn") var start_scene := "res://Scene/Ui/prolog.tscn"
 
 @onready var btn_start: Button = $Center/Buttons/Mulai
 @onready var btn_settings: Button = $Center/Buttons/Pengaturan

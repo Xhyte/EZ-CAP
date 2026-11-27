@@ -4,6 +4,7 @@ extends CanvasLayer
 
 const HIDDEN_SCENES := [
 	"res://Scene/Ui/main_menu.tscn",
+	"res://Scene/Ui/prolog.tscn",
 ]
 const BAR_SIZE := Vector2(360, 24)
 const MARGIN := Vector2(40, 32)

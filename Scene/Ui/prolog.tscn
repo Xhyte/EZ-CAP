@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cckujkqws3gaa"]
+
+[ext_resource type="Script" uid="uid://chi5yw0x0wtlg" path="res://Scripts/prolog.gd" id="1_prolog"]
+[ext_resource type="Texture2D" uid="uid://bm3smbpt1pgl" path="res://Assets/kelas pintu kanan.png" id="2_tbrrg"]
+[ext_resource type="Texture2D" uid="uid://bokb4kvivet60" path="res://Assets/Coridor.png" id="3_t4fr5"]
+[ext_resource type="Texture2D" uid="uid://l43m762x80wt" path="res://Assets/KARANI.png" id="4_uwwnf"]
+[ext_resource type="Texture2D" uid="uid://bauefqk5v42f6" path="res://Assets/EZ.png" id="5_7avng"]
+
+[node name="Prolog" type="Control" unique_id=831750763]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_prolog")
+bg_kelas = ExtResource("2_tbrrg")
+bg_lorong = ExtResource("3_t4fr5")
+karani = ExtResource("4_uwwnf")
+ez = ExtResource("5_7avng")
